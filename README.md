@@ -50,3 +50,4 @@ src/
 
 ## License
 Proprietary — Tejaswar. All Rights Reserved.
+- 2026-08-31: Dino Runner Desktop v0.1.0 — 5000 modules, 1.4 lakh LOC
