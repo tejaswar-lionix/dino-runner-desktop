@@ -12,14 +12,46 @@
     "test": "vitest run",
     "lint": "eslint src --ext ts,tsx"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@types/node": "20.14.9",
+    "concurrently": "8.2.2",
+    "electron": "30.0.0",
+    "electron-builder": "^24.13.3",
     "typescript": "5.5.4",
     "vite": "5.3.5",
-    "electron": "30.0.0",
-    "concurrently": "8.2.2",
-    "wait-on": "7.2.0",
     "vitest": "1.6.0",
-    "@types/node": "20.14.9"
+    "wait-on": "7.2.0"
+  },
+  "build": {
+    "appId": "com.tejaswar.dinorunner",
+    "productName": "Dino Runner Desktop",
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "public"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Game"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ]
+    }
+  },
+  "author": {
+    "name": "Tejaswar",
+    "email": "tejaswar@tejaswar.dev"
   }
 }
